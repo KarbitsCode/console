@@ -5,6 +5,12 @@
   "description": "Returns `console` if present, otherwise returns a `noop`.",
   "main": "lib/index.js",
   "module": "es/index.js",
+  "scripts": {
+    "clean": "nwb clean-module",
+    "build": "nwb build-web-module",
+    "test": "nwb test && nwb test --coverage",
+    "prepare": "npm run clean && npm run test && npm run build"
+  },
   "files": [
     "es",
     "lib",
@@ -23,5 +29,8 @@
   },
   "devDependencies": {
     "nwb": "0.21.5"
+  },
+  "dependencies": {
+    "noop": "^1.0.1"
   }
 }

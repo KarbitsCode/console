@@ -1,6 +1,6 @@
-// Avoid `console` errors in environments that lack a console.
+require('noop');
 let method;
-const noop = function() {};
+const noop = global.noop;
 const methods = [
   "assert",
   "clear",
@@ -29,8 +29,6 @@ let length = methods.length;
 
 while (length--) {
   method = methods[length];
-
-  // Only stub undefined methods.
   if (!console[method]) {
     console[method] = noop;
   }

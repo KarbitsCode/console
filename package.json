@@ -28,8 +28,8 @@
     "url": "https://github.com/matthewhudson/console/issues"
   },
   "devDependencies": {
-    "async-function": "^0.1.0",
-    "is-async-function": "^2.1.0",
+    "async-function": "0.1.0",
+    "is-async-function": "2.1.0",
     "nwb": "0.21.5"
   },
   "dependencies": {

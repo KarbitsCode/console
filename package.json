@@ -29,7 +29,9 @@
   },
   "devDependencies": {
     "async-function": "0.1.0",
+    "generator-function": "^1.0.0",
     "is-async-function": "2.1.0",
+    "is-generator-function": "^1.1.0",
     "nwb": "0.21.5"
   },
   "dependencies": {

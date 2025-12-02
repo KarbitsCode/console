@@ -1,0 +1,13 @@
+diff --git a/node_modules/log4js/lib/layouts.js b/node_modules/log4js/lib/layouts.js
+index 07e32ed..dff3764 100644
+--- a/node_modules/log4js/lib/layouts.js
++++ b/node_modules/log4js/lib/layouts.js
+@@ -30,7 +30,7 @@ const semver = require('semver');
+ 
+ function wrapErrorsWithInspect(items) {
+   return items.map((item) => {
+-    if (util.isError(item) && item.stack) {
++    if (item instanceof Error && item.stack) {
+       return {
+         inspect: function () {
+           return semver.satisfies(process.version, '>=6') ? util.format(item) : `${util.format(item)}\n${item.stack}`;
